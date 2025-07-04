@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: %i[ show edit update destroy ]
+  before_action :set_listing, only: %i[ show edit update destroy photos]
 
   # GET /listings or /listings.json
   def index
@@ -55,6 +55,9 @@ class ListingsController < ApplicationController
       format.html { redirect_to listings_path, status: :see_other, notice: "Listing was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def photos
   end
 
   private
