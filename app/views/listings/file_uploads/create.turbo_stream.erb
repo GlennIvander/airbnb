@@ -1,8 +1,5 @@
 <% if @file.present? %>
   <%= turbo_stream.append("image-previews") do %>
-    <div>
-      <%= image_tag @file, class: "w-20 h-20 object-cover" %>
-      <%= hidden_field_tag "listing[images][]", @file.signed_id %>
-    <div>
+    <%= render '_image', image: @file %>
   <% end %>
 <% end %>
