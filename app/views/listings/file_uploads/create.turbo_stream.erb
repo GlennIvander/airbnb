@@ -1,5 +1,7 @@
-<% if @file.present? %>
-  <%= turbo_stream.append("image-previews") do %>
-    <%= render '_image', image: @file %>
+
+  <% if @file.present? %>
+    <%= turbo_stream.append("image-previews") do %>
+      <%= render '_image', image: @file %>
+    <% end %>
   <% end %>
-<% end %>
+
