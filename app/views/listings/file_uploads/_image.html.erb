@@ -1,4 +1,7 @@
-<div >
+<div class="relative">
   <%= image_tag image, class: "w-20 h-20 object-cover" %>
   <%= hidden_field_tag "listing[images][]", image.signed_id %>
+  <%=link_to "#", class:"absolute top-0 right-0" do %>
+    <i class="fa-solid fa-x text-red-500"></i>
+  <% end %>
 <div>
